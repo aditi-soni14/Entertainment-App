@@ -1,24 +1,3 @@
-// import { useState } from "react";
-
-// export function useBookmarks() {
-//   const [bookmarks, setBookmarks] = useState([]);
-
-//   const toggleBookmark = (movie) => {
-//     setBookmarks((prev) => {
-//       const isAlready = prev.find((m) => m.id === movie.id);
-//       if (isAlready) {
-//         return prev.filter((m) => m.id !== movie.id);
-//       } else {
-//         return [...prev, movie];
-//       }
-//     });
-//   };
-
-//   return { bookmarks, toggleBookmark };
-// }
-
-
-
 import { useState } from "react";
 
 export function useBookmarks() {

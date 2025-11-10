@@ -1,33 +1,3 @@
-// import { createContext, useContext, useState } from "react";
-
-// const BookmarkContext = createContext();
-
-// export function BookmarkProvider({ children }) {
-//   const [bookmarks, setBookmarks] = useState([]);
-
-//   const toggleBookmark = (item) => {
-//     setBookmarks((prev) => {
-//       const exists = prev.find((m) => m.id === item.id);
-//       if (exists) {
-//         return prev.filter((m) => m.id !== item.id);
-//       }
-//       return [...prev, item];
-//     });
-//   };
-
-//   return (
-//     <BookmarkContext.Provider value={{ bookmarks, toggleBookmark }}>
-//       {children}
-//     </BookmarkContext.Provider>
-//   );
-// }
-
-// export function useBookmarks() {
-//   return useContext(BookmarkContext);
-// }
-
-
-
 import { createContext, useContext, useState } from "react";
 
 const BookmarkContext = createContext(); // Create context to share bookmark data
