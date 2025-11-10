@@ -1,5 +1,3 @@
-
-
 import mongoose from "mongoose"; // Import Mongoose for MongoDB interactions
 
 // Function to connect to MongoDB
@@ -9,7 +7,7 @@ export const connectDB = async () => {
     await mongoose.connect(process.env.MONGO_URI);
 
     // Log success message if connection is successful
-    console.log("✅ MongoDB Connected Successfully");
+    console.log(" MongoDB Connected Successfully");
   } catch (error) {
     // Log error message if connection fails
     console.error(" MongoDB Connection Failed:", error.message);

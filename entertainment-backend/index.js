@@ -1,29 +1,3 @@
-// import express from "express";
-// import dotenv from "dotenv";
-// import mongoose from "mongoose";
-// import cors from "cors";
-// import userRoutes from "./routes/userRoutes.js"; 
-// import connectDB from "./config/db.js";
-// dotenv.config();
-
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
-
-// connectDB();
-
-// // routes
-// app.use("/api/users", userRoutes); 
-
-// // MongoDB connection and server start 
-// app.get("/",(req,res)=>{
-//     res.send("API is running....")
-// });
-
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
-
-
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -63,4 +37,4 @@ app.get("/", (req, res) => {
 
 // Start the server and listen on defined PORT
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
