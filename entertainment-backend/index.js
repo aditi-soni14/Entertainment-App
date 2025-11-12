@@ -26,4 +26,7 @@ app.get("/", (req, res) => {
 });
 
 
-export default app;
+// export default app;
+// ================== SERVER START ==================
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
