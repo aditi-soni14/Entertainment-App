@@ -51,8 +51,16 @@ console.log("TMDB API KEY from env:",process.env.TMDB_API_KEY)
 const app = express();
 
 // ================== MIDDLEWARE ==================
-app.use(cors());
+// app.use(cors());
+// ================== MIDDLEWARE ==================
+app.use(cors({
+  origin: "*",
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+}));
+
 app.use(express.json());
+
 
 // ================== DATABASE ==================
 connectDB(); 
