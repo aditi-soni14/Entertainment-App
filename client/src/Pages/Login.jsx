@@ -101,8 +101,8 @@
 
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import API from "./api"; // Import the API
-
+// import API from "./api"; // Import the API
+import API from "../api/api.js";
 export default function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
