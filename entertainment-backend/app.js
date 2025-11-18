@@ -5,9 +5,9 @@ import { connectDB } from "./config/db.js";
 
 // Import all route files
 import authRoutes from "./routes/authRoutes.js";
-import bookmarkRoutes from "./routes/Bookmark.js";
-import movieRoutes from "./routes/Movie.js";
-import tvRoutes from "./routes/TVseries.js";
+import bookmarkRoutes from "./routes/bookmarkRoutes.js";
+import movieRoutes from "./routes/movieRoutes.js";
+import tvRoutes from "./routes/tvSeriesRoutes.js";
 import userRoutes from "./routes/Userroutes.js";
 
 dotenv.config();
