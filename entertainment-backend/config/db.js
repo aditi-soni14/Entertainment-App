@@ -23,22 +23,36 @@
 
 ///18/11/25
 // config/db.js
+// import mongoose from "mongoose";
+
+// // Function to connect to MongoDB
+// export const connectDB = async () => {
+//   try {
+//     // Use environment variable MONGO_URL (make sure your .env matches)
+//     await mongoose.connect(process.env.MONGO_URL, {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//     });
+
+//     console.log("MongoDB Connected Successfully");
+//   } catch (error) {
+//     console.error("MongoDB Connection Failed:", error.message);
+//     process.exit(1); // Exit process with failure
+//   }
+// };
+
+// export default connectDB;
+
+
+//just try
+
 import mongoose from "mongoose";
 
-// Function to connect to MongoDB
 export const connectDB = async () => {
   try {
-    // Use environment variable MONGO_URL (make sure your .env matches)
-    await mongoose.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("MongoDB Connected Successfully");
   } catch (error) {
-    console.error("MongoDB Connection Failed:", error.message);
-    process.exit(1); // Exit process with failure
+    console.error("MongoDB Connection Failed", error);
   }
 };
-
-export default connectDB;
