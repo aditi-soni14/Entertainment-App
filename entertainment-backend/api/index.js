@@ -31,55 +31,66 @@
 // const PORT = process.env.PORT || 5000;
 // app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
+////// old
+// import express from "express";
+// import dotenv from "dotenv";
+// import mongoose from "mongoose";
+// import cors from "cors";
 
-import express from "express";
-import dotenv from "dotenv";
-import mongoose from "mongoose";
-import cors from "cors";
+// import userRoutes from "./routes/userRoutes.js";
+// import movieRoutes from "./routes/movieRoutes.js";
+// import tvSeriesRoutes from "./routes/tvSeriesRoutes.js";
+// import bookmarkRoutes from "./routes/bookmarkRoutes.js"
 
-import userRoutes from "./routes/userRoutes.js";
-import movieRoutes from "./routes/movieRoutes.js";
-import tvSeriesRoutes from "./routes/tvSeriesRoutes.js";
-import bookmarkRoutes from "./routes/bookmarkRoutes.js"
-
-import connectDB from "./config/db.js";
-
-
-// Load environment variables
-dotenv.config();
-console.log("TMDB API KEY from env:",process.env.TMDB_API_KEY)
-const app = express();
-
-// ================== MIDDLEWARE ==================
-// app.use(cors());
-// ================== MIDDLEWARE ==================
-app.use(cors({
-  origin: "*",
-  methods: "GET,POST,PUT,DELETE",
-  allowedHeaders: "Content-Type,Authorization"
-}));
-
-app.use(express.json());
+// import connectDB from "./config/db.js";
 
 
-// ================== DATABASE ==================
-connectDB(); 
+// // Load environment variables
+// dotenv.config();
+// console.log("TMDB API KEY from env:",process.env.TMDB_API_KEY)
+// const app = express();
 
-// ================== ROUTES ==================
-app.use("/api/users", userRoutes);
-app.use("/api/movies", movieRoutes);
-app.use("/api/tvseries", tvSeriesRoutes);
-app.use("/api/bookmarks", bookmarkRoutes);
+// // ================== MIDDLEWARE ==================
+// // app.use(cors());
+// // ================== MIDDLEWARE ==================
+// app.use(cors({
+//   origin: "*",
+//   methods: "GET,POST,PUT,DELETE",
+//   allowedHeaders: "Content-Type,Authorization"
+// }));
 
-app.get("/", (req, res) => {
-  res.send("API is running....");
-});
+// app.use(express.json());
 
 
-app.get("/", (req, res) => {
-  res.send("Backend is running successfully!");
-});
+// // ================== DATABASE ==================
+// connectDB(); 
 
+// // ================== ROUTES ==================
+// app.use("/api/users", userRoutes);
+// app.use("/api/movies", movieRoutes);
+// app.use("/api/tvseries", tvSeriesRoutes);
+// app.use("/api/bookmarks", bookmarkRoutes);
+
+// app.get("/", (req, res) => {
+//   res.send("API is running....");
+// });
+
+
+// app.get("/", (req, res) => {
+//   res.send("Backend is running successfully!");
+// });
+
+
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
+//////new 18/11/25
+
+import app from "./app.js";
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
