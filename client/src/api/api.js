@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  // baseURL: import.meta.env.VITE_API_BASE_URL || "/api",
-  baseURL: "https://entertainment-app-n1w5.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL ,
+  // baseURL: "https://entertainment-app-n1w5.onrender.com/api",
 });
 
 // Interceptor to attach token with every request if available
