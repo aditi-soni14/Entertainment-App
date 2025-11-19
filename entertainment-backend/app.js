@@ -8,7 +8,7 @@ import authRoutes from "./routes/authRoutes.js";
 import bookmarkRoutes from "./routes/bookmarkRoutes.js";
 import movieRoutes from "./routes/movieRoutes.js";
 import tvRoutes from "./routes/tvSeriesRoutes.js";
-import userRoutes from "./routes/userroutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
 connectDB();
